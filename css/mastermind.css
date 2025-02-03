@@ -1,0 +1,185 @@
+/* Validato */
+@keyframes confetti {
+    0% {background-image: linear-gradient(to right, var(--mastermind) 0%, var(--background) 1%, var(--background) 99%, var(--mastermind) 100%);}
+    10% {background-image: linear-gradient(to right, var(--mastermind) 0%, var(--background) 2%, var(--background) 98%, var(--mastermind) 100%);}
+    20% {background-image: linear-gradient(to right, var(--mastermind) 0%, var(--background) 3%, var(--background) 97%, var(--mastermind) 100%);}
+    30% {background-image: linear-gradient(to right, var(--mastermind) 0%, var(--background) 4%, var(--background) 96%, var(--mastermind) 100%);}
+    40% {background-image: linear-gradient(to right, var(--mastermind-shadow) 0%, var(--background) 5%, var(--background) 95%, var(--mastermind-shadow) 100%);}
+    50% {background-image: linear-gradient(to right, var(--mastermind-shadow) 0%, var(--background) 6%, var(--background) 94%, var(--mastermind-shadow) 100%);}
+    60% {background-image: linear-gradient(to right, var(--mastermind-shadow) 0%, var(--background) 5%, var(--background) 95%, var(--mastermind-shadow) 100%);}
+    70% {background-image: linear-gradient(to right, var(--mastermind) 0%, var(--background) 4%, var(--background) 96%, var(--mastermind) 100%);}
+    80% {background-image: linear-gradient(to right, var(--mastermind) 0%, var(--background) 3%, var(--background) 97%, var(--mastermind) 100%);}
+    90% {background-image: linear-gradient(to right, var(--mastermind) 0%, var(--background) 2%, var(--background) 98%, var(--mastermind) 100%);}
+    100% {background-image: linear-gradient(to right, var(--mastermind) 0%, var(--background) 1%, var(--background) 99%, var(--mastermind) 100%);}
+}
+
+.confetti{
+   animation-name: confetti;
+   animation-duration: 0.33s;
+   animation-timing-function: linear;
+   animation-iteration-count: 1;
+}
+
+.playArea{
+    display: flex;
+    flex-direction: column;
+}
+
+.playArea > div{
+    display: flex;
+    margin: 3px;
+}
+
+.try, .show{
+    display: flex;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.colorResult{
+    border-radius: 7px;
+    padding: 3px;
+    margin: 5px 3px;
+    background-color: var(--foreground);
+}
+
+.color, .popupColor, .resultColor{
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    margin: 3px;
+    height: 50px;
+    width: 50px;
+    background-color: var(--background);
+}
+
+.guess{
+    background-color: var(--highlight);
+    height: 65.2px;
+    width: 65.2px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.guess:active{
+    background-color: var(--highlight-shadow);
+}
+
+.guess:disabled{
+    background-color: var(--mastermind);
+}
+
+.guess > p{
+    font-weight: bold;
+}
+
+.blocker{
+    background-color: #000;
+    opacity: 0.6;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.stylePopup{
+    border: 1px solid var(--text);
+    background-color: var(--shadow);
+    border-radius: 5px;
+    padding: 7px;
+    align-self: center;
+}
+
+.colorPopup{
+    display: flex;
+    flex-direction: column;
+}
+
+.selectContainer{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.sparire{
+    display: none !important;
+    z-index: -1;
+}
+
+.appear{
+    display: block;
+    z-index: 5;
+}
+
+.errorPopUp{
+    border: 3px solid red;
+}
+
+.errorPopUp > *{
+    margin: 3px;
+}
+
+.errorPopUp > button{
+    display: flex;
+    font-size: x-large;
+    justify-content: space-around;
+    background-color: red;
+}
+
+.corretto{
+    background-color: var(--wordle);
+}
+
+.presenza{
+    background-color: #c8b653;
+}
+
+.endGamePopup{
+    display: flex;
+    flex-direction: column;
+}
+
+.endGamePopup > hr{
+    width: 90%;
+    margin: 5px 0px;
+    columns: var(--foreground);
+}
+
+.endGamePopup > a{
+    margin: 5px ;
+    padding: 3px;
+    border: 1px solid var(--text);
+    background-color: var(--highlight);
+    border-radius: 5px;
+    justify-self: center;
+}
+
+@media screen and (max-width: 520px) {
+    .color{
+        height: 30px;
+        width: 30px;
+    }
+
+    .guess{
+        height: 45.2px;
+        width: 45.2px; 
+        font-size: x-small;
+    }
+}
+

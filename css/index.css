@@ -1,0 +1,102 @@
+/* Validato */
+body{
+    background-image: linear-gradient(to right, var(--wordle) 0%, var(--background) 43%, var(--background) 58%, var(--mastermind) 100%);
+}
+
+#section > form{
+    justify-self: center;
+    align-self: center;
+    border: 1px solid var(--text);
+    padding: 17px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--background);
+    justify-content: space-around;
+}
+
+form *{
+    font-size: medium;
+}
+
+#section > a > h1{
+    align-self: center;
+}
+
+#section > a:active{
+    background-color: var(--shadow);
+    box-shadow: 0px 0px var(--shadow);
+}
+
+.wordle{
+    background-color: var(--wordle);
+}
+
+.wordle:active{
+    background-color: var(--wordle-shadow);
+}
+
+.mastermind{
+    background-color: var(--mastermind);
+}
+
+.mastermind:active{
+    background-color: var(--mastermind-shadow);
+}
+
+form input[type=submit]{
+    margin: 13px 3px 1px 3px;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+form > hr{
+    color: var(--foreground);
+    margin-top: 7px;
+}
+
+form input[type=text]{
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    width: 100%;
+}
+
+form b{
+    margin: 5px;
+}
+
+.selector{
+    display: flex;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    margin: 5px 7px 7px 7px;
+    background-color: var(--footer);
+}
+
+.selector > p{
+    border: none;
+    padding: 5px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+@media screen and (max-width: 430px) {
+    #section{
+        background-image: linear-gradient( var(--wordle) 0%, var(--background) 43%, var(--background) 58%, var(--mastermind) 100%);
+        flex-direction: column;
+    }
+
+    form{
+        margin: 5px;
+    }
+
+}
+
+
+

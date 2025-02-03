@@ -1,0 +1,190 @@
+/* Validato */
+:root{
+    --font-size: xx-large;
+}
+
+@keyframes confetti {
+    0% {background-image: linear-gradient(to right, var(--wordle) 0%, var(--background) 1%, var(--background) 99%, var(--wordle) 100%);}
+    10% {background-image: linear-gradient(to right, var(--wordle) 0%, var(--background) 2%, var(--background) 98%, var(--wordle) 100%);}
+    20% {background-image: linear-gradient(to right, var(--wordle) 0%, var(--background) 3%, var(--background) 97%, var(--wordle) 100%);}
+    30% {background-image: linear-gradient(to right, var(--wordle) 0%, var(--background) 4%, var(--background) 96%, var(--wordle) 100%);}
+    40% {background-image: linear-gradient(to right, var(--wordle-shadow) 0%, var(--background) 5%, var(--background) 95%, var(--wordle-shadow) 100%);}
+    50% {background-image: linear-gradient(to right, var(--wordle-shadow) 0%, var(--background) 6%, var(--background) 94%, var(--wordle-shadow) 100%);}
+    60% {background-image: linear-gradient(to right, var(--wordle-shadow) 0%, var(--background) 5%, var(--background) 95%, var(--wordle-shadow) 100%);}
+    70% {background-image: linear-gradient(to right, var(--wordle) 0%, var(--background) 4%, var(--background) 96%, var(--wordle) 100%);}
+    80% {background-image: linear-gradient(to right, var(--wordle) 0%, var(--background) 3%, var(--background) 97%, var(--wordle) 100%);}
+    90% {background-image: linear-gradient(to right, var(--wordle) 0%, var(--background) 2%, var(--background) 98%, var(--wordle) 100%);}
+    100% {background-image: linear-gradient(to right, var(--wordle) 0%, var(--background) 1%, var(--background) 99%, var(--wordle) 100%);}
+}
+
+.confetti{
+   animation-name: confetti;
+   animation-duration: 0.33s;
+   animation-timing-function: linear;
+   animation-iteration-count: 1;
+}
+
+.playArea{
+    display: flex;
+    flex-direction: column;
+}
+
+.wordContainer, #endContainer{
+    display: flex;
+}
+
+.letter, .key, .skey, .endLetter{
+    display: flex;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    margin: 3px;
+    height: 50px;
+    width: 50px;
+    background-color: var(--background);
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+
+.trys{
+    align-self: center;
+}
+
+.keyboard{
+    margin: auto;
+    padding: 13px;
+}
+
+.keyboardRow{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.imgKey{
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    z-index: inherit;
+}
+
+.key:active, .skey:active{
+    background-color: var(--shadow);
+}
+
+.wrong{
+    background-color: var(--foreground)
+}
+
+.guess{
+    background-color: #c8b653;
+}
+
+.correct{
+    background-color: var(--wordle);
+}
+
+
+.invert{
+    filter: invert(1);
+}
+
+.stylePopup{
+    border: 1px solid var(--text);
+    background-color: var(--shadow);
+    border-radius: 5px;
+    padding: 7px;
+    align-self: center;
+}
+
+.endGamePopup{
+    display: flex;
+    flex-direction: column;
+}
+
+.endGamePopup > hr{
+    width: 90%;
+    margin: 5px 0px;
+    columns: var(--foreground);
+}
+
+.endGamePopup > a{
+    margin: 5px ;
+    padding: 3px;
+    border: 1px solid var(--text);
+    background-color: var(--highlight);
+    border-radius: 5px;
+    justify-self: center;
+}
+
+.errorPopUp > *{
+    margin: 3px;
+}
+
+.errorPopUp > button{
+    display: flex;
+    font-size: x-large;
+    justify-content: space-around;
+    background-color: red;
+}
+
+.blocker{
+    background-color: #000;
+    opacity: 0.6;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.sparire{
+    display: none !important;
+    z-index: -1;
+}
+
+.appear{
+    display: block;
+    z-index: 5;
+}
+
+.errorPopUp{
+    border: 3px solid red;
+}
+
+@media screen and (max-width: 650px) {
+    :root{
+        --font-size: large;
+    }
+
+    .letter{
+        width: 40px;
+        height: 40px;
+    }
+
+    .skey, .key{
+        max-width: 20px;
+        min-width: 17px;
+        height: 35px;
+    }
+
+    .imgKey{
+        max-width: 18px;
+        max-height: 18px;
+    }
+}

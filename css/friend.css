@@ -1,0 +1,117 @@
+/* Validato */
+.main{
+    flex: 0 1 auto;
+    border: 1px solid var(--text);
+    border-radius: 15px;
+    background-color: var(--shadow);
+    min-width: 320px;
+    width: 40vw;
+    padding: 15px;
+}
+
+.accetta, .rifiuta {
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+    align-self: center;
+}
+
+.bar{
+    display: flex;
+    border: 1px solid var(--text);
+    border-radius: 7px;
+    max-height: 32px;
+}
+
+.imgStyle {
+    width: 32px;
+    display: flex;
+    padding: 3px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.rifiuta{
+    margin-left: auto;
+}
+
+#result{
+    margin-top: 3px;
+    display: flex;  
+    flex-direction: column; 
+    overflow: auto;
+    white-space: nowrap;
+    max-height: 50vh;
+    position: absolute;
+    min-width: 320px;
+    width: 40vw;
+    z-index: 5;
+}
+
+#result > div{
+    padding: 7px;
+    font-size: larger;
+    font-weight: bold;
+    background-color: var(--footer);
+    border-left: 1px solid var(--text);
+    border-right: 1px solid var(--text);
+    border-bottom: 1px solid var(--text) ;
+}
+
+#result > div:first-child{
+    border-top: 1px solid var(--text);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#result > div:last-child{
+    border-bottom: 1px solid var(--text);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#result > div:active{
+    background-color: var(--background);
+}
+
+input{
+    background-color: transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    padding: 9px;
+    font-size: large;
+    border: none;
+    width: 100%;
+}
+
+.search{
+    padding: 10px;
+}
+
+.search > h3{
+    margin: 0px 0px 3px 0px;
+}
+
+.invert{
+    filter: invert(1);
+}
+
+.requests{
+    display: flex;
+    flex-direction: column;
+}
+
+.request{
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    margin: 3px 0px;
+    padding: 9px;
+    display: flex;
+    width: 90%;
+    align-self: center;
+}
+
+hr{
+    width: 95%;
+    margin: 5px auto;
+}

@@ -1,0 +1,200 @@
+/* Validato */
+
+/* Colori di default */
+:root{
+    --footer: #262422;
+    --background: #312e2b;
+    --foreground: #6e6d6d;
+    --shadow: #4b4847;
+    --text: #fff;
+    --highlight-shadow: #712cf9;
+    --highlight: #6025d5;
+    --mastermind-shadow: #11bbee;
+    --mastermind: #2255aa;
+    --wordle-shadow: #7de772;
+    --wordle: #2f7527;
+    --selected: #3b1278; 
+}
+/* Colori modalità chiara */
+.light-mode{
+    --footer: #ececec;
+    --background: #fff;
+    --foreground: #5a5958;
+    --shadow: #b3b1b1;
+    --text: #000;
+    --highlight: #712cf9;
+    --highlight-shadow: #6025d5;
+    --mastermind: #11bbee;
+    --mastermind-shadow: #2255aa;
+    --wordle: #7de772;
+    --wordle-shadow: #2f7527;
+    --selected: #9c7ff9;
+}
+
+*{
+    margin: 0px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    color: var(--text);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+nav{
+    margin: 0px;
+    margin-bottom: 5px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--highlight);
+    box-shadow: 0px 5px var(--highlight-shadow);
+}
+
+footer{
+    background-color: var(--footer);
+}
+
+#section{
+    margin: 0px;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    padding: 13px;
+}
+
+a{
+    text-decoration: none;
+    font-size: medium;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 3px;
+    border: 1px solid var(--text);
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+button:active{
+    background-color: var(--shadow);
+    box-shadow: 0px 0px var(--shadow);
+}
+
+footer > hr{
+    margin: 10px;
+    color: var(--foreground);
+    margin-bottom: 3px;
+}
+
+.displayFlex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer > .displayFlex > div{
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+footer > .displayFlex > div > h3{
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.icon{
+    height: 60px;
+    width: 60px;
+}
+
+.iconSmall{
+    height: 45px;
+    width: 45px;
+}
+
+.NavLeftElem{
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+.NavLeftElem > *{
+    padding: 5px;
+}
+
+.login{
+    border: 1px solid var(--text);
+    border-radius: 5px;
+}
+
+.linkLogo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lesserText{
+    color: var(--foreground);
+}
+
+.listContainer{
+    display: flex;
+}
+
+.listContainer > div{
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+}
+
+.listContainer a{
+    margin-left: 3px;
+    font-size: smaller;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.themeFooter{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logoFooter{
+    display: flex;
+    flex-direction: column;
+}
+
+.fatalError{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 13px;
+}
+
+.fatalError > a{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 530px) {
+    nav{
+        flex-direction: column;
+    }
+
+    footer > .displayFlex > div{
+        flex-basis: 50%;
+    }
+
+    .NavLeftElem{
+        margin: 0px;
+    }
+}
+
+

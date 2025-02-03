@@ -1,0 +1,12 @@
+/* Validato */
+#section{
+    padding: 17px;
+}
+
+hr{
+    margin: 11px 9px;    
+}
+
+#section *{
+    line-height: 1.5;
+}

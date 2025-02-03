@@ -1,0 +1,123 @@
+/* Validato */
+#section > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+form{
+    border: 1px solid var(--text);
+    border-radius: 15px;
+    background-color: var(--shadow);
+    box-shadow: 5px 7px var(--foreground);
+    padding: 17px;
+}
+
+select{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    padding: 7px 9px;
+    font-size: large;
+}
+
+form hr{
+    color: var(--text);
+    margin: 5px 7px;
+}
+
+form > div{
+    margin: 0px;
+}
+
+form a{
+    text-decoration: underline;
+}
+
+.topForm{
+    text-align: center;
+}
+
+.bottomForm{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border: 1px solid var(--text);
+}
+
+input, .fakeInput{
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 7px 9px;
+    font-size: large;
+}
+
+option{
+    color: #000
+}
+
+.fakeInput{
+    color: var(--wordle-shadow);
+    border: 1px solid var(--wordle-shadow);
+}
+
+.confirmBtn{
+    width: 100%;
+    background-color: var(--highlight);
+    margin-top: 15px;
+    margin-bottom: 13px;
+}
+
+.confirmBtn:active{
+    background-color: var(--highlight-shadow);
+}
+
+.textLabelFrom{
+    margin: 3px 0px;
+}
+
+.error{
+    padding: 5px;
+    background-color: lightcoral;
+    border-radius: 5px;
+}
+
+.visible{
+    display: flex;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+}
+
+.visible > input{
+    flex: 1;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.eye{
+    margin: 0px;
+    width: 27px;
+    height: 27px;
+    align-self: center;
+}
+
+.btnBg{
+    width: 32px;
+    display: flex;
+    padding: 3px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.invert{
+    filter: invert(1);
+}
+
+.separator{
+    align-self: center;
+    margin-bottom: 5px;
+}
+

@@ -1,0 +1,186 @@
+/* Validato */
+input{
+    margin: 0;
+    border: none;
+}
+
+input[type="text"]{
+    display: none;
+}
+
+.leaderBoard{
+    flex: 0 1 40%;
+    border: 1px solid var(--text);
+    border-radius: 15px;
+    background-color: var(--shadow);
+    padding: 13px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+    padding: 5px;
+}
+
+.selector{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.option{
+    border: 1px solid var(--text);
+    border-radius: 11px;
+    display: flex;
+}
+
+.option > *{
+    padding: 7px;
+    position: relative;
+}
+
+.start{
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-right: 1px solid var(--text);
+}
+
+.middle{
+    border-right: 1px solid var(--text);
+}
+
+.end{
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+}
+
+.optionSubmit{
+    margin: auto;
+    background-color: var(--wordle);
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    font-size: medium;
+}
+
+.optionSubmit:active{
+    background-color: var(--wordle-shadow);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin: 5px;
+}
+
+.container > p{
+    margin: 3px;
+}
+
+.selected{
+    background-color: var(--selected);
+}
+
+.spacing{
+    flex: 1;
+    overflow: auto;
+    white-space: nowrap;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll{
+    background-color: var(--footer);
+    border-radius: 7px;
+    border: 1px solid var(--text);
+}
+
+.scroll > div{
+    border-bottom: 1px solid var(--text);
+    display: flex;
+}
+
+.scroll > :last-child{
+    border: none;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.scroll > div > *{
+    padding: 5px;
+    min-width: 16%;
+    word-wrap: break-word;
+    font-size: small;
+}
+
+.dataspacer{
+    border-left: 1px solid var(--text);
+    margin-left: auto;
+}
+
+.last{
+    min-width: 11%;
+    text-align: center;
+    font-weight: bold;
+}
+
+canvas{
+    display: block;
+    margin: 5px 0px auto 0px;
+    border-radius: 15px;
+    border: 1px solid var(--text);
+    min-width: 320px;
+    object-fit: contain;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.title > a{
+    margin: 0px 0px 0px auto;
+    text-decoration: underline;
+}
+
+.head{
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: var(--selected);
+}
+
+.me{
+    font-weight: bold;
+    background-color: var(--mastermind);
+}
+
+@media screen and (max-width: 1050px) {
+    #section{
+        flex-direction: column;
+    }
+
+    form{
+        flex-direction: column;
+    }
+
+    nav{
+        flex-direction: column;
+    }
+
+    .NavLeftElem{
+        margin: 0px;
+    }
+
+    .scroll > div > *{
+        font-size: medium;
+    }
+
+}
+

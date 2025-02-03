@@ -1,0 +1,31 @@
+Utenti:
+Usr: utente1 Pw: utente1 aws: Pizza
+Usr: utente2 Pw: utente2 aws: Die Hard
+Usr: utente3 Pw: utente3 aws: Panda
+Usr: test Pw: Test aws: Giorgio
+Usr: utente4 Pw: utente4 aws: 2021
+
+Amicizie:
+utente1 -> Test
+utente2 -> utente1
+Test -> utente2
+Utente3 -> utente2
+Test -> utente3
+
+Partite:
+Utente1 -> wordle FF 58
+Utente1 -> wordle MF 711
+Utente1 -> wordle MM 0
+Utente1 -> wordle DM 375
+
+Utente1 -> mastermind FF 85
+Utente1 -> mastermind MM 433
+Utente1 -> mastermind FD 20
+
+Utente2 -> wordle MM 20
+Utente2 -> mastermind MM 99
+Utente2 -> mastermind DD 0
+
+Utente3 -> wordle DD 9825
+Utente3 -> wordle MM 4320
+utente3 -> mastermind MM 0
